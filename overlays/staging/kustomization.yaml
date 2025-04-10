@@ -1,0 +1,18 @@
+resources:
+- ../../base
+
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+patches:
+- path: patch-deployment.yaml
+
+labels:
+- includeSelectors: true
+  pairs:
+    project: t3aCarbon-PaC
+
+# Customize images (optional, if not using patches)
+images:
+  - name: nexus-repository/app-name
+    newName: 54.80.16.163:8086/repository/helloworld/hello-world-app
+    newTag: 1.0-SNAPSHOT-2025-03-12_16-54-20  # Update the image tag

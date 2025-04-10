@@ -1,0 +1,25 @@
+# Active service (production traffic)
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-active
+spec:
+  ports:
+  - port: 8080           # Service listens on 8080
+    protocol: TCP
+    targetPort: 8080     # Forwards to container port 8080
+  selector:
+    app: hello-world
+---
+# Preview service (testing traffic)
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-preview
+spec:
+  ports:
+  - port: 8081           # Service listens on 8088
+    protocol: TCP
+    targetPort: 8080     # Still forwards to container port 8080
+  selector:
+    app: hello-world

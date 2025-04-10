@@ -1,0 +1,27 @@
+# Main production route
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello-world-app
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: hello-world-active
+---
+# Preview route for testing new versions
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello-world-preview
+spec:
+  port:
+    targetPort: 8080
+  tls:
+    termination: edge
+  to:
+    kind: Service
+    name: hello-world-preview
