@@ -7,4 +7,4 @@ spec:
     spec:
       containers:
       - name: hello-world-app  # This must match the name in the original rollout
-        image: gcr.io/google-samples/hello-app:1.0  # Change to whatever image you want
+        image: gcr.io/google-samples/hello-app:2.0  # Change to whatever image you want
