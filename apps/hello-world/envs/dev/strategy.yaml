@@ -19,7 +19,7 @@ spec:
           role: preview
       prePromotionAnalysis:
         templates:
-        - templateName: smoke-tests
+        - templateName: dev-smoke-tests
         args:
         - name: route-host
           value: dev-hello-world-preview-hello-world-dev.apps.e3c5k7g5w3o7p7w.5vc5.p1.openshiftapps.com
