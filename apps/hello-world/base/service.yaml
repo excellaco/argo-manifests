@@ -10,6 +10,7 @@ spec:
     targetPort: 8080     
   selector:
     app: hello-world
+    role: active
 ---
 # Preview service (testing traffic)
 apiVersion: v1
@@ -23,3 +24,4 @@ spec:
     targetPort: 8080     
   selector:
     app: hello-world
+    role: preview
