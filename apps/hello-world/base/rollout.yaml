@@ -10,6 +10,7 @@ spec:
     metadata:
       labels:
         app: hello-world
+        role: does-not-matter  # Placeholder key so Rollouts can patch this at runtime
     spec:
       containers:
       - image: gcr.io/google-samples/hello-app:1.0  # This is a real web server
