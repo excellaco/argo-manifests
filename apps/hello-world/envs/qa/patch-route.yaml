@@ -5,3 +5,13 @@ metadata:
 spec:
   to:
     name: qa-hello-world-active
+
+---
+
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: hello-world-preview
+spec:
+  to:
+    name: qa-hello-world-preview
