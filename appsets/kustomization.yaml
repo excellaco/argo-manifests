@@ -1,0 +1,3 @@
+resources:
+  - dev-appset.yaml
+  - qa-appset.yaml
