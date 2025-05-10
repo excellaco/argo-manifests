@@ -8,12 +8,6 @@ spec:
   selector:
     matchLabels:
       app: hello-world
-  strategy:
-    blueGreen:
-      activeService: hello-world-active
-      autoPromotionEnabled: false
-      previewService: hello-world-preview
-      previewReplicaCount: 1
   template:
     metadata:
       labels:

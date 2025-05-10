@@ -5,9 +5,9 @@ metadata:
   name: hello-world-active
 spec:
   ports:
-  - port: 8080           # Service listens on 8080
+  - port: 8080          
     protocol: TCP
-    targetPort: 8080     # Forwards to container port 8080
+    targetPort: 8080     
   selector:
     app: hello-world
 ---
@@ -18,8 +18,8 @@ metadata:
   name: hello-world-preview
 spec:
   ports:
-  - port: 8081           # Service listens on 8088
+  - port: 8081           
     protocol: TCP
-    targetPort: 8080     # Still forwards to container port 8080
+    targetPort: 8080     
   selector:
     app: hello-world

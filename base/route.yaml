@@ -2,7 +2,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: hello-world-app
+  name: hello-world-active
 spec:
   port:
     targetPort: 8080
