@@ -9,7 +9,7 @@ spec:
   generators:
   - git:
       repoURL: https://github.com/excellaco/argo-manifests.git
-      revision: HEAD
+      revision: feature/appsets
       directories:
       - path: apps/*/envs/dev
   template:
@@ -19,7 +19,7 @@ spec:
       project: exemplar
       source:
         repoURL: https://github.com/excellaco/argo-manifests.git
-        targetRevision: HEAD
+        targetRevision: feature/appsets
         path: '{{.path.path}}'
       destination:
         server: https://kubernetes.default.svc
