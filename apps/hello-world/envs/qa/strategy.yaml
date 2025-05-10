@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: hello-world-app
+spec:
+  strategy:
+    blueGreen:
+      autoPromotionEnabled: true
+      autoPromotionSeconds: 20
+      scaleDownDelaySeconds: 300
+      activeService: qa-hello-world-active
+      previewService: qa-hello-world-preview
+      previewReplicaCount: 1
+      activeMetadata:
+        labels:
+          role: active
+      previewMetadata:
+        labels:
+          role: preview
+      prePromotionAnalysis:
+        templates:
+        - templateName: smoke-tests
+        args:
+        - name: route-host
+          value: qa-hello-world-preview-hello-world-qa.apps.e3c5k7g5w3o7p7w.5vc5.p1.openshiftapps.com

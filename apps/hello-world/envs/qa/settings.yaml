@@ -3,9 +3,6 @@ kind: AnalysisTemplate
 metadata:
   name: smoke-tests
 spec:
-  args:
-    - name: route-host
-      value: hello-world-preview-staging.apps.e3c5k7g5w3o7p7w.5vc5.p1.openshiftapps.com
   metrics:
     - name: smoke-test
       provider:

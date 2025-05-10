@@ -2,14 +2,13 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../base
-namePrefix: quality-
-nameSuffix: -qa
+namePrefix: qa-
 patchesStrategicMerge:
 - replicas.yaml
 - version.yaml
-- rollout.yaml
-- version.yaml
+- strategy.yaml
 - settings.yaml
+
 
 commonAnnotations:
   sonarqube-scan: success

@@ -4,3 +4,4 @@ metadata:
   name: hello-world-app
 spec:
   replicas: 2
+  revisionHistoryLimit: 2
