@@ -12,3 +12,12 @@ patchesStrategicMerge:
 
 commonAnnotations:
   sonarqube-scan: success
+
+patches:
+  - target:
+      kind: Route
+      name: hello-world-active
+    patch: |
+      - op: replace
+        path: /spec/to/name
+        value: qa-hello-world-active
