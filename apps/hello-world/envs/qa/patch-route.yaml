@@ -2,7 +2,6 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: hello-world-active
-$patch: strategic
 spec:
   to:
     name: qa-hello-world-active
