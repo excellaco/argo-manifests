@@ -6,5 +6,5 @@ spec:
   template:
     spec:
       containers:
-      - image: quay.io/openshiftdemos/rollouts-demo:blue
+      - image: quay.io/openshiftdemos/rollouts-demo:green
         name: hello-world-app
