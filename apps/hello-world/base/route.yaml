@@ -10,7 +10,7 @@ spec:
     termination: edge
   to:
     kind: Service
-    name: hello-world-active
+
 ---
 # Preview route for testing new versions
 apiVersion: route.openshift.io/v1
@@ -24,4 +24,3 @@ spec:
     termination: edge
   to:
     kind: Service
-    name: hello-world-preview
