@@ -7,16 +7,8 @@ patchesStrategicMerge:
 - replicas.yaml
 - version.yaml
 - strategy.yaml
-
+- patch-route.yaml
 
 commonAnnotations:
   sonarqube-scan: success
   
-patches:
-  - target:
-      kind: Route
-      name: hello-world-active
-    patch: |
-      - op: replace
-        path: /spec/to/name
-        value: dev-hello-world-active
