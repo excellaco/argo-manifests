@@ -3,4 +3,4 @@ kind: Rollout
 metadata:
   name: hello-world-app
 spec:
-  replicas: 2
+  replicas: 4
