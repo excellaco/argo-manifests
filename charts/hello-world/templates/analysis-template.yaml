@@ -43,4 +43,4 @@ spec:
                         exit 1
                     env:
                       - name: ROUTE_HOST
-                        value: "{{'{{args.route-host}}'}}"
+                        value: "{{`{{args.route-host}}`}}"
