@@ -27,7 +27,11 @@ spec:
                       - sh
                       - -c
                       - |
-                        echo "Testing route: $ROUTE_HOST"
+                        echo "Waiting for 30 seconds before starting the health check..."
+                        sleep 30  # Wait for the route to be available
+                        echo "Starting health check..."
+                        echo "Attempting to reach $ROUTE_HOST"
+                        
                         for i in {1..3}; do
                           echo "Attempt $i/3..."
                           STATUS=$(curl -s -o /dev/null -w "%{http_code}" -k --connect-timeout 5 --max-time 10 https://$ROUTE_HOST)
