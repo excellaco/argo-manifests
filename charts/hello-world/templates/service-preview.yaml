@@ -16,4 +16,3 @@ spec:
   selector:
     app.kubernetes.io/name: {{ include "hello-world.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
-    role: preview
