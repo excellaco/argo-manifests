@@ -52,6 +52,6 @@ spec:
       prePromotionAnalysis:
         templates:
           - templateName: smoke-tests
-        arguments:
+        args:
           - name: route-host
             value: {{ include "hello-world.previewRouteHost" . }}

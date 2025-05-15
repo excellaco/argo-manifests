@@ -17,3 +17,5 @@ livenessProbe:
 
 smokeTest:
   routeHost: placeholder  # overridden per env
+
+revisionHistoryLimit: 2
