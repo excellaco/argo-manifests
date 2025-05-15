@@ -67,3 +67,10 @@ Dynamically compute Route Host for for preview
 {{- define "hello-world.previewRouteHost" -}}
 {{ printf "%s-preview-route-%s.%s" (include "hello-world.fullname" .) .Release.Namespace .Values.clusterDomain }}
 {{- end }}
+
+{{/*
+Defines a helper for Common Annotations
+*/}}
+{{- define "hello-world.commonAnnotations" -}}
+{{- toYaml .Values.commonAnnotations | nindent 4 }}
+{{- end }}

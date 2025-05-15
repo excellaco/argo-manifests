@@ -19,3 +19,7 @@ smokeTest:
   routeHost: placeholder  # overridden per env
 
 revisionHistoryLimit: 2
+commonAnnotations:
+  team: carbon
+  project: t3aPaC
+
