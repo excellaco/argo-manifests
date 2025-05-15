@@ -38,8 +38,8 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
   strategy:
     blueGreen:
-      activeService: {{ include "hello-world.fullname" . }}
-      previewService: {{ printf "%s-preview" (include "hello-world.fullname" .) }}
+      activeService: {{ printf "%s-active-service" (include "hello-world.fullname" .) }}
+      previewService: {{ printf "%s-preview-service" (include "hello-world.fullname" .) }}
 
       autoPromotionEnabled: false
       scaleDownDelaySeconds: 300
