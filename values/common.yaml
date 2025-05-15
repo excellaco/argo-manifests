@@ -3,8 +3,6 @@ replicaCount: 2
 image:
   repository: quay.io/openshiftdemos/rollouts-demo
   tag: "blue"
-  port: 8080
-  pullPolicy: IfNotPresent
 
 service:
   port: 8080

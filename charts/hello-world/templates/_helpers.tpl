@@ -65,5 +65,5 @@ Create the name of the service account to use
 Dynamically compute Route Host for for preview
 */}}
 {{- define "hello-world.previewRouteHost" -}}
-{{ include "hello-world.fullname" . }}-preview-route.{{ .Release.Namespace }}.{{ .Values.clusterDomain }}
+{{ printf "%s-preview-route-%s.%s" (include "hello-world.fullname" .) .Release.Namespace .Values.clusterDomain }}
 {{- end }}
