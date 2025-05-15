@@ -1,7 +1,7 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: {{ printf "%s-preview" (include "hello-world.fullname" .) }}
+  name: {{ printf "%s-preview-route" (include "hello-world.fullname" .) }}
   labels:
     app.kubernetes.io/name: {{ include "hello-world.name" . }}
     helm.sh/chart: {{ include "hello-world.chart" . }}
@@ -10,7 +10,7 @@ metadata:
 spec:
   to:
     kind: Service
-    name: {{ printf "%s-preview" (include "hello-world.fullname" .) }}
+    name: {{ printf "%s-preview-service" (include "hello-world.fullname" .) }}
   port:
     targetPort: http
   tls:
