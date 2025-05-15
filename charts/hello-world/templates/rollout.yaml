@@ -41,8 +41,10 @@ spec:
       activeService: {{ printf "%s-active-service" (include "hello-world.fullname" .) }}
       previewService: {{ printf "%s-preview-service" (include "hello-world.fullname" .) }}
 
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true 
+      autoPromotionSeconds: 30
       scaleDownDelaySeconds: 300
+      
       activeMetadata:
         labels:
           role: active
