@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ printf "%s-active" (include "hello-world.fullname" .) }}
+  labels:
+    app.kubernetes.io/name: {{ include "hello-world.name" . }}
+    helm.sh/chart: {{ include "hello-world.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  to:
+    kind: Service
+    name: {{ include "hello-world.fullname" . }}
+  port:
+    targetPort: http
+  tls:
+    termination: edge
