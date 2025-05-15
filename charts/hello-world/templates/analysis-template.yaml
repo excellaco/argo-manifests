@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AnalysisTemplate
 metadata:
-  name: smoke-tests
+  name: helm-smoke-tests
   labels:
     app.kubernetes.io/name: {{ include "hello-world.name" . }}
     helm.sh/chart: {{ include "hello-world.chart" . }}
