@@ -54,4 +54,4 @@ spec:
           - templateName: helm-smoke-tests
         args:
           - name: route-host
-            value: {{ printf "%s-preview-route" (include "hello-world.fullname" .) }}
+            value: {{ include "hello-world.previewRouteHost" . }}
