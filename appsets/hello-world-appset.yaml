@@ -26,7 +26,6 @@ spec:
               - $values/values/common.yaml
               - $values/values/app-version/{{.version}}.yaml
               - $values/values/env-type/{{.type}}.yaml
-              - $values/values/regions/{{.region}}.yaml
               - $values/values/envs/{{.env}}.yaml
         - repoURL: https://github.com/excellaco/argo-manifests.git
           targetRevision: feature/helm
