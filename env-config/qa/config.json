@@ -1,5 +1,5 @@
 {
-  "env": "dev",
+  "env": "qa",
   "region": "us",
   "type": "non-prod",
   "version": "qa",
