@@ -37,6 +37,9 @@ spec:
             periodSeconds: {{ .Values.livenessProbe.periodSeconds }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+  analysis:
+    successfulRunHistoryLimit: 2
+    unsuccessfulRunHistoryLimit: 1
   strategy:
     blueGreen:
       activeService: {{ printf "%s-active-service" (include "hello-world.fullname" .) }}
