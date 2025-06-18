@@ -12,7 +12,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: gcr.io/google-samples/hello-app:1.0  # This is a real web server
+      - image: quay.io/openshiftdemos/rollouts-demo  # This is a real web server
         name: hello-world-app
         ports:
         - containerPort: 8080  # This image uses port 8080
